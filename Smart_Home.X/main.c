@@ -44,11 +44,26 @@
 #include "mcc_generated_files/mcc.h"
 #include "RTC_Module/RTC.h"
 
+void EUSART_Write_string(uint8_t *data){
+    uint8_t i=0;
+    
+            
+    while(data[i]!='\0'){
+         if(EUSART_is_tx_ready())
+                {
+                   EUSART_Write(data[i]);
+                }
+        
+        i++;
+    
+}
+}
+
 /*
                          Main application
  */
 rtc_get_value_t reading;
-uint8_t data=0;
+ char bufferWrite[50];
 void main(void)
 {
     // Initialize the device
@@ -70,13 +85,19 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
- data= I2C_Read1ByteRegister(104,0x01);
+EUSART_Write('A');
+
     while (1)
     {
-       reading =rtc_get_value(104);
-        
-  // minite=minite &127;
-   __delay_ms(10);
+      // reading =rtc_get_value(104);
+       //sprintf(bufferWrite, "\r\n time = %x:%x:%x V \r\n",reading.Seconds, reading.Minutes, reading.Houres );
+      // EUSART_Write_string("Tarek");
+//        if(EUSART_is_tx_ready())
+//                {
+//                   EUSART_Write('A');
+//                }
+// 
+  
         // Add your application code
     }
 }

@@ -5250,11 +5250,26 @@ rtc_get_value_t rtc_get_value(uint8_t adress);
 # 45 "main.c" 2
 
 
+void EUSART_Write_string(uint8_t *data){
+    uint8_t i=0;
+
+
+    while(data[i]!='\0'){
+         if(EUSART_is_tx_ready())
+                {
+                   EUSART_Write(data[i]);
+                }
+
+        i++;
+
+}
+}
+
 
 
 
 rtc_get_value_t reading;
-uint8_t data=0;
+ char bufferWrite[50];
 void main(void)
 {
 
@@ -5276,13 +5291,10 @@ void main(void)
 
 
 
- data= I2C_Read1ByteRegister(104,0x01);
+EUSART_Write('A');
+
     while (1)
     {
-       reading =rtc_get_value(104);
-
-
-   _delay((unsigned long)((10)*(16000000/4000.0)));
-
+# 102 "main.c"
     }
 }
