@@ -5209,6 +5209,7 @@ eusart_status_t EUSART_get_last_status(void);
 uint8_t EUSART_Read(void);
 # 341 "./mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
+void EUSART_Write_string(uint8_t *data);
 # 361 "./mcc_generated_files/eusart.h"
 void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 # 379 "./mcc_generated_files/eusart.h"
@@ -5233,8 +5234,10 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
-# 1 "./RTC_Module/RTC.h" 1
-# 13 "./RTC_Module/RTC.h"
+# 1 "./Print_RTC/print_rtc.h" 1
+# 12 "./Print_RTC/print_rtc.h"
+# 1 "./Print_RTC/../RTC_Module/RTC.h" 1
+# 12 "./Print_RTC/../RTC_Module/RTC.h"
 typedef struct{
     uint8_t Seconds;
     uint8_t Minutes;
@@ -5247,28 +5250,19 @@ typedef struct{
 }rtc_get_value_t;
 
 rtc_get_value_t rtc_get_value(uint8_t adress);
+# 12 "./Print_RTC/print_rtc.h" 2
+
+void print_rtc_data_time(const rtc_get_value_t *ptr);
 # 45 "main.c" 2
 
 
-void EUSART_Write_string(uint8_t *data){
-    uint8_t i=0;
 
-
-    while(data[i]!='\0'){
-
-                   EUSART_Write(data[i]);
-
-
-        i++;
-
-}
-}
 
 
 
 
 rtc_get_value_t reading;
- char bufferWrite[50];
+
 void main(void)
 {
 
@@ -5291,12 +5285,9 @@ void main(void)
 
 
 reading =rtc_get_value(104);
-       sprintf(bufferWrite, "\r\n time = %x:%x:%x V \r\n",reading.Seconds, reading.Minutes, reading.Houres );
-     EUSART_Write_string(bufferWrite);
+print_rtc_data_time(&reading);
     while (1)
     {
-
-
 
 
 

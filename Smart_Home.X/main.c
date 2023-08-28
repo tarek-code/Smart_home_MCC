@@ -42,27 +42,15 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-#include "RTC_Module/RTC.h"
+#include "Print_RTC/print_rtc.h"
 
-void EUSART_Write_string(uint8_t *data){
-    uint8_t i=0;
-    
-            
-    while(data[i]!='\0'){
-         
-                   EUSART_Write(data[i]);
-                
-        
-        i++;
-    
-}
-}
+
 
 /*
                          Main application
  */
 rtc_get_value_t reading;
- char bufferWrite[50];
+ 
 void main(void)
 {
     // Initialize the device
@@ -85,13 +73,10 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 reading =rtc_get_value(104);
-       sprintf(bufferWrite, "\r\n time = %x:%x:%x V \r\n",reading.Seconds, reading.Minutes, reading.Houres );
-     EUSART_Write_string(bufferWrite);
+print_rtc_data_time(&reading);
     while (1)
     {
-       //EUSART_Write_string("Tarek");
-
-// 
+        
   
         // Add your application code
     }

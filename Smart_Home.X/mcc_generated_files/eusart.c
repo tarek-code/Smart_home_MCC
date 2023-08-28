@@ -138,7 +138,19 @@ void EUSART_Write(uint8_t txData)
     TXREG = txData;    // Write the data byte to the USART.
 }
 
-
+void EUSART_Write_string(uint8_t *data){
+    uint8_t i=0;
+    
+            
+    while(data[i]!='\0'){
+         
+                   EUSART_Write(data[i]);
+                
+        
+        i++;
+    
+}
+}
 
 
 void EUSART_DefaultFramingErrorHandler(void){}

@@ -10,6 +10,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>RTC_Module</sourceRootElem>
+                <sourceRootElem>Print_RTC</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

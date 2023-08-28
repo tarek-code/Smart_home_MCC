@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "Print_RTC/print_rtc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,11 @@
 # 1 "<built-in>" 2
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "Print_RTC/print_rtc.c" 2
+# 1 "Print_RTC/print_rtc.h" 1
+# 11 "Print_RTC/print_rtc.h"
+# 1 "Print_RTC/../mcc_generated_files/mcc.h" 1
+# 49 "Print_RTC/../mcc_generated_files/mcc.h"
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 1 3
 # 18 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4918,21 +4919,21 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
+# 49 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/mcc.h" 2
+# 1 "Print_RTC/../mcc_generated_files/device_config.h" 1
+# 50 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 110 "mcc_generated_files/pin_manager.h"
+# 1 "Print_RTC/../mcc_generated_files/pin_manager.h" 1
+# 110 "Print_RTC/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 122 "mcc_generated_files/pin_manager.h"
+# 122 "Print_RTC/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
+# 51 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
 
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
+# 53 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\conio.h" 1 3
 
@@ -5088,15 +5089,15 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 8 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\conio.h" 2 3
-# 54 "mcc_generated_files/mcc.h" 2
+# 54 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 110 "mcc_generated_files/interrupt_manager.h"
+# 1 "Print_RTC/../mcc_generated_files/interrupt_manager.h" 1
+# 110 "Print_RTC/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
+# 55 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/i2c_master.h" 1
-# 58 "mcc_generated_files/i2c_master.h"
+# 1 "Print_RTC/../mcc_generated_files/i2c_master.h" 1
+# 58 "Print_RTC/../mcc_generated_files/i2c_master.h"
 typedef enum {
     I2C_NOERR,
     I2C_BUSY,
@@ -5129,11 +5130,11 @@ i2c_operations_t I2C_CallbackRestartRead(void *funPtr);
 
 
 void I2C_Initialize(void);
-# 101 "mcc_generated_files/i2c_master.h"
+# 101 "Print_RTC/../mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_Open(i2c_address_t address);
-# 111 "mcc_generated_files/i2c_master.h"
+# 111 "Print_RTC/../mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_Close(void);
-# 123 "mcc_generated_files/i2c_master.h"
+# 123 "Print_RTC/../mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_MasterOperation(_Bool read);
 
 
@@ -5145,47 +5146,47 @@ i2c_error_t I2C_MasterWrite(void);
 
 
 i2c_error_t I2C_MasterRead(void);
-# 142 "mcc_generated_files/i2c_master.h"
+# 142 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetTimeout(uint8_t timeOut);
-# 152 "mcc_generated_files/i2c_master.h"
+# 152 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "mcc_generated_files/i2c_master.h"
+# 164 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr);
-# 174 "mcc_generated_files/i2c_master.h"
+# 174 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr);
-# 184 "mcc_generated_files/i2c_master.h"
+# 184 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr);
-# 194 "mcc_generated_files/i2c_master.h"
+# 194 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
-# 204 "mcc_generated_files/i2c_master.h"
+# 204 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
-# 213 "mcc_generated_files/i2c_master.h"
+# 213 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void (*MSSP_InterruptHandler)(void);
-# 222 "mcc_generated_files/i2c_master.h"
+# 222 "Print_RTC/../mcc_generated_files/i2c_master.h"
 void I2C_SetInterruptHandler(void (* InterruptHandler)(void));
-# 56 "mcc_generated_files/mcc.h" 2
+# 56 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/memory.h" 1
-# 99 "mcc_generated_files/memory.h"
+# 1 "Print_RTC/../mcc_generated_files/memory.h" 1
+# 99 "Print_RTC/../mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
-# 125 "mcc_generated_files/memory.h"
+# 125 "Print_RTC/../mcc_generated_files/memory.h"
 uint16_t FLASH_ReadWord(uint32_t flashAddr);
-# 157 "mcc_generated_files/memory.h"
+# 157 "Print_RTC/../mcc_generated_files/memory.h"
 void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-# 193 "mcc_generated_files/memory.h"
+# 193 "Print_RTC/../mcc_generated_files/memory.h"
 int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-# 218 "mcc_generated_files/memory.h"
+# 218 "Print_RTC/../mcc_generated_files/memory.h"
 void FLASH_EraseBlock(uint32_t baseAddr);
-# 249 "mcc_generated_files/memory.h"
+# 249 "Print_RTC/../mcc_generated_files/memory.h"
 void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-# 275 "mcc_generated_files/memory.h"
+# 275 "Print_RTC/../mcc_generated_files/memory.h"
 uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 57 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/eusart.h" 1
-# 75 "mcc_generated_files/eusart.h"
+# 1 "Print_RTC/../mcc_generated_files/eusart.h" 1
+# 75 "Print_RTC/../mcc_generated_files/eusart.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -5195,31 +5196,31 @@ typedef union {
     };
     uint8_t status;
 }eusart_status_t;
-# 110 "mcc_generated_files/eusart.h"
+# 110 "Print_RTC/../mcc_generated_files/eusart.h"
 void EUSART_Initialize(void);
-# 158 "mcc_generated_files/eusart.h"
+# 158 "Print_RTC/../mcc_generated_files/eusart.h"
 _Bool EUSART_is_tx_ready(void);
-# 206 "mcc_generated_files/eusart.h"
+# 206 "Print_RTC/../mcc_generated_files/eusart.h"
 _Bool EUSART_is_rx_ready(void);
-# 253 "mcc_generated_files/eusart.h"
+# 253 "Print_RTC/../mcc_generated_files/eusart.h"
 _Bool EUSART_is_tx_done(void);
-# 301 "mcc_generated_files/eusart.h"
+# 301 "Print_RTC/../mcc_generated_files/eusart.h"
 eusart_status_t EUSART_get_last_status(void);
-# 321 "mcc_generated_files/eusart.h"
+# 321 "Print_RTC/../mcc_generated_files/eusart.h"
 uint8_t EUSART_Read(void);
-# 341 "mcc_generated_files/eusart.h"
+# 341 "Print_RTC/../mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
 void EUSART_Write_string(uint8_t *data);
-# 361 "mcc_generated_files/eusart.h"
+# 361 "Print_RTC/../mcc_generated_files/eusart.h"
 void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 379 "mcc_generated_files/eusart.h"
+# 379 "Print_RTC/../mcc_generated_files/eusart.h"
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 397 "mcc_generated_files/eusart.h"
+# 397 "Print_RTC/../mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 58 "mcc_generated_files/mcc.h" 2
+# 58 "Print_RTC/../mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/examples/i2c_master_example.h" 1
-# 54 "mcc_generated_files/examples/i2c_master_example.h"
+# 1 "Print_RTC/../mcc_generated_files/examples/i2c_master_example.h" 1
+# 54 "Print_RTC/../mcc_generated_files/examples/i2c_master_example.h"
 uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
 uint16_t I2C_Read2ByteRegister(i2c_address_t address, uint8_t reg);
 void I2C_Write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
@@ -5227,29 +5228,36 @@ void I2C_Write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data);
 void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
-# 59 "mcc_generated_files/mcc.h" 2
-# 74 "mcc_generated_files/mcc.h"
+# 59 "Print_RTC/../mcc_generated_files/mcc.h" 2
+# 74 "Print_RTC/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 87 "mcc_generated_files/mcc.h"
+# 87 "Print_RTC/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
+# 11 "Print_RTC/print_rtc.h" 2
 
+# 1 "Print_RTC/../RTC_Module/RTC.h" 1
+# 12 "Print_RTC/../RTC_Module/RTC.h"
+typedef struct{
+    uint8_t Seconds;
+    uint8_t Minutes;
+    uint8_t Houres;
+    uint8_t Day;
+    uint8_t Month;
+    uint8_t Year;
+    uint8_t Date;
 
+}rtc_get_value_t;
 
-void SYSTEM_Initialize(void)
-{
+rtc_get_value_t rtc_get_value(uint8_t adress);
+# 12 "Print_RTC/print_rtc.h" 2
 
-    INTERRUPT_Initialize();
-    I2C_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    EUSART_Initialize();
-}
+void print_rtc_data_time(const rtc_get_value_t *ptr);
+# 1 "Print_RTC/print_rtc.c" 2
 
-void OSCILLATOR_Initialize(void)
-{
-
-    OSCCON = 0x30;
-
-    OSCTUNE = 0x00;
+static char bufferWrite[50];
+void print_rtc_data_time(const rtc_get_value_t *ptr){
+    if(((void*)0)!=ptr){
+     sprintf(bufferWrite, "time : %x:%x:%x \rDate : %x:%x:%x",ptr->Seconds, ptr->Minutes, ptr->Houres,ptr->Date,ptr->Month,ptr->Year );
+     EUSART_Write_string(bufferWrite);
+    }
 }

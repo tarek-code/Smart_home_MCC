@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F431 `(v ~T0 @X0 0 tf ]
-"13 RTC_Module/RTC.h
-[; ;RTC_Module/RTC.h: 13: typedef struct{
+"12 RTC_Module/RTC.h
+[; ;RTC_Module/RTC.h: 12: typedef struct{
 [s S3 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S3 . Seconds Minutes Houres Day Month Year Date ]
 "54 RTC_Module/../mcc_generated_files/examples/i2c_master_example.h

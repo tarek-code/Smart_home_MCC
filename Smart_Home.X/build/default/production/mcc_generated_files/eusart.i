@@ -4946,6 +4946,7 @@ eusart_status_t EUSART_get_last_status(void);
 uint8_t EUSART_Read(void);
 # 341 "mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
+void EUSART_Write_string(uint8_t *data);
 # 361 "mcc_generated_files/eusart.h"
 void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 # 379 "mcc_generated_files/eusart.h"
@@ -5044,7 +5045,19 @@ void EUSART_Write(uint8_t txData)
     TXREG = txData;
 }
 
+void EUSART_Write_string(uint8_t *data){
+    uint8_t i=0;
 
+
+    while(data[i]!='\0'){
+
+                   EUSART_Write(data[i]);
+
+
+        i++;
+
+}
+}
 
 
 void EUSART_DefaultFramingErrorHandler(void){}

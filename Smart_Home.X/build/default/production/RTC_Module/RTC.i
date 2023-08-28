@@ -355,7 +355,6 @@ void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 11 "RTC_Module/RTC.h" 2
 
-
 typedef struct{
     uint8_t Seconds;
     uint8_t Minutes;

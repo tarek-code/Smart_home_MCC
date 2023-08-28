@@ -339,7 +339,7 @@ uint8_t EUSART_Read(void);
     None
 */
 void EUSART_Write(uint8_t txData);
-
+void EUSART_Write_string(uint8_t *data);
 
 
 /**

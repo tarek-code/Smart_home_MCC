@@ -18,6 +18,9 @@
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/i2c_master.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="Print_RTC" displayName="Print_RTC" projectFiles="true">
+        <itemPath>Print_RTC/print_rtc.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="RTC_Module" displayName="RTC_Module" projectFiles="true">
         <itemPath>RTC_Module/RTC.h</itemPath>
       </logicalFolder>
@@ -43,6 +46,9 @@
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
         <itemPath>mcc_generated_files/i2c_master.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="Print_RTC" displayName="Print_RTC" projectFiles="true">
+        <itemPath>Print_RTC/print_rtc.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="RTC_Module" displayName="RTC_Module" projectFiles="true">
         <itemPath>RTC_Module/RTC.c</itemPath>
       </logicalFolder>
@@ -57,6 +63,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>RTC_Module</Elem>
+    <Elem>Print_RTC</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

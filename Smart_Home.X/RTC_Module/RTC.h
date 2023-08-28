@@ -9,7 +9,6 @@
 #define	RTC_H
 
 #include "../mcc_generated_files/examples/i2c_master_example.h"
-
 typedef struct{
     uint8_t Seconds;
     uint8_t Minutes;
