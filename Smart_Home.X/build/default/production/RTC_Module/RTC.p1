@@ -1,0 +1,78 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F431 `(v ~T0 @X0 0 tf ]
+"13 RTC_Module/RTC.h
+[; ;RTC_Module/RTC.h: 13: typedef struct{
+[s S3 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S3 . Seconds Minutes Houres Day Month Year Date ]
+"54 RTC_Module/../mcc_generated_files/examples/i2c_master_example.h
+[; ;RTC_Module/../mcc_generated_files/examples/i2c_master_example.h: 54: uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 RTC_Module/../mcc_generated_files/examples/../i2c_master.h
+[; ;RTC_Module/../mcc_generated_files/examples/../i2c_master.h: 213: void (*MSSP_InterruptHandler)(void);
+[v _MSSP_InterruptHandler `*F431 ~T0 @X0 1 e ]
+"4 RTC_Module/RTC.c
+[; ;RTC_Module/RTC.c: 4: rtc_get_value_t rtc_get_value(uint8_t adress){
+[v _rtc_get_value `(S3 ~T0 @X0 1 ef1`uc ]
+{
+[e :U _rtc_get_value ]
+[v _adress `uc ~T0 @X0 1 r1 ]
+[f ]
+[v F476 `S3 ~T0 @X0 1 s ]
+[i F476
+:U ..
+:U ..
+"6
+[; ;RTC_Module/RTC.c: 6:   rtc_get_value_t rtc_get_value_local={0};
+-> -> 0 `i `uc
+..
+..
+]
+[v _rtc_get_value_local `S3 ~T0 @X0 1 a ]
+[e = _rtc_get_value_local F476 ]
+"7
+[; ;RTC_Module/RTC.c: 7:   rtc_get_value_local.Seconds= I2C_Read1ByteRegister(adress,0x00);
+[e = . _rtc_get_value_local 0 ( _I2C_Read1ByteRegister (2 , _adress -> -> 0 `i `uc ]
+"8
+[; ;RTC_Module/RTC.c: 8:   (rtc_get_value_local.Seconds) &=127;
+[e =& . _rtc_get_value_local 0 -> -> 127 `i `uc ]
+"9
+[; ;RTC_Module/RTC.c: 9:   rtc_get_value_local.Minutes= I2C_Read1ByteRegister(adress,0x01);
+[e = . _rtc_get_value_local 1 ( _I2C_Read1ByteRegister (2 , _adress -> -> 1 `i `uc ]
+"10
+[; ;RTC_Module/RTC.c: 10: (rtc_get_value_local.Minutes) &=127;
+[e =& . _rtc_get_value_local 1 -> -> 127 `i `uc ]
+"11
+[; ;RTC_Module/RTC.c: 11:   rtc_get_value_local.Houres= I2C_Read1ByteRegister(adress,0x02);
+[e = . _rtc_get_value_local 2 ( _I2C_Read1ByteRegister (2 , _adress -> -> 2 `i `uc ]
+"12
+[; ;RTC_Module/RTC.c: 12:   (rtc_get_value_local.Houres) &=127;
+[e =& . _rtc_get_value_local 2 -> -> 127 `i `uc ]
+"13
+[; ;RTC_Module/RTC.c: 13:   rtc_get_value_local.Day= I2C_Read1ByteRegister(adress,0x03);
+[e = . _rtc_get_value_local 3 ( _I2C_Read1ByteRegister (2 , _adress -> -> 3 `i `uc ]
+"14
+[; ;RTC_Module/RTC.c: 14:   (rtc_get_value_local.Day) &=7;
+[e =& . _rtc_get_value_local 3 -> -> 7 `i `uc ]
+"15
+[; ;RTC_Module/RTC.c: 15:   rtc_get_value_local.Date= I2C_Read1ByteRegister(adress,0x04);
+[e = . _rtc_get_value_local 6 ( _I2C_Read1ByteRegister (2 , _adress -> -> 4 `i `uc ]
+"16
+[; ;RTC_Module/RTC.c: 16:   (rtc_get_value_local.Date) &=63;
+[e =& . _rtc_get_value_local 6 -> -> 63 `i `uc ]
+"17
+[; ;RTC_Module/RTC.c: 17:   rtc_get_value_local.Month= I2C_Read1ByteRegister(adress,0x05);
+[e = . _rtc_get_value_local 4 ( _I2C_Read1ByteRegister (2 , _adress -> -> 5 `i `uc ]
+"18
+[; ;RTC_Module/RTC.c: 18:   (rtc_get_value_local.Month) &=31;
+[e =& . _rtc_get_value_local 4 -> -> 31 `i `uc ]
+"19
+[; ;RTC_Module/RTC.c: 19:   rtc_get_value_local.Year= I2C_Read1ByteRegister(adress,0x06);
+[e = . _rtc_get_value_local 5 ( _I2C_Read1ByteRegister (2 , _adress -> -> 6 `i `uc ]
+"20
+[; ;RTC_Module/RTC.c: 20:   return rtc_get_value_local;
+[e ) _rtc_get_value_local ]
+[e $UE 4  ]
+"21
+[; ;RTC_Module/RTC.c: 21: }
+[e :UE 4 ]
+}
