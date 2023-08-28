@@ -49,10 +49,9 @@ void EUSART_Write_string(uint8_t *data){
     
             
     while(data[i]!='\0'){
-         if(EUSART_is_tx_ready())
-                {
+         
                    EUSART_Write(data[i]);
-                }
+                
         
         i++;
     
@@ -85,17 +84,13 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-EUSART_Write('A');
-
+reading =rtc_get_value(104);
+       sprintf(bufferWrite, "\r\n time = %x:%x:%x V \r\n",reading.Seconds, reading.Minutes, reading.Houres );
+     EUSART_Write_string(bufferWrite);
     while (1)
     {
-      // reading =rtc_get_value(104);
-       //sprintf(bufferWrite, "\r\n time = %x:%x:%x V \r\n",reading.Seconds, reading.Minutes, reading.Houres );
-      // EUSART_Write_string("Tarek");
-//        if(EUSART_is_tx_ready())
-//                {
-//                   EUSART_Write('A');
-//                }
+       //EUSART_Write_string("Tarek");
+
 // 
   
         // Add your application code
