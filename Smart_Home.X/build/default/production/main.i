@@ -7,7 +7,8 @@
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 44 "main.c"
+
+
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "E:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\xc.h" 1 3
@@ -5263,11 +5264,20 @@ void print_rtc_data_time(const rtc_get_value_t *ptr);
 void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data);
 uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address);
 # 62 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 2
-# 80 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h" 1
+# 11 "./mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h"
+# 1 "./mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 1
+# 11 "./mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h" 2
+
+
+uint8_t Temp_sensor_TC74_Read(i2c_address_t address, uint8_t reg);
+# 63 "./mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 2
+# 81 "./mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 93 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+# 94 "./mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 44 "main.c" 2
+# 3 "main.c" 2
 
 
 
@@ -5278,6 +5288,7 @@ void OSCILLATOR_Initialize(void);
 rtc_get_value_t reading;
 uint8_t data_1=0;
 uint8_t data_2=0;
+uint8_t temp_reading=0;
 void main(void)
 {
 
@@ -5285,29 +5296,31 @@ void main(void)
 
 
 
-
-
-
-
    (INTCONbits.GIE = 1);
-
-
 
 
 
     (INTCONbits.PEIE = 1);
 
-
-
-
 eeprom_24C01C_write_byte(81,0x08,5);
 eeprom_24C01C_write_byte(83,0x08,6);
 data_1=eeprom_24C01C_read_byte(81,0x08);
 data_2=eeprom_24C01C_read_byte(83,0x08);
+
+
+
+
     while (1)
     {
-        reading =rtc_get_value(104);
-        print_rtc_data_time(&reading);
+
+      temp_reading= Temp_sensor_TC74_Read(79,0x00);
+
+      I2C_Write1ByteRegister(0x28,0x00,temp_reading);
+
+      reading =rtc_get_value(104);
+
+      print_rtc_data_time(&reading);
+       _delay((unsigned long)((500)*(16000000/4000.0)));
 
 
     }

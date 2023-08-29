@@ -8,6 +8,11 @@
             <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/RTC_Module/RTC.h</file>
             <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/main.c</file>
             <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/Print_RTC/print_rtc.c</file>
+            <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/External_EEPROM/external_eeprom.h</file>
+            <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/mcc_generated_files/i2c_master.c</file>
+            <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/External_EEPROM/external_eeprom.c</file>
+            <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/mcc_generated_files/i2c_master.h</file>
+            <file>file:/D:/Ahmed_addulghafar/02_Part%202_Microcontroller_Interfacing/Smart_Home/Smart_home_MCC/Smart_Home.X/mcc_generated_files/examples/i2c_master_example.h</file>
         </group>
     </open-files>
 </project-private>

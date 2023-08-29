@@ -12,4 +12,6 @@ mcc_generated_files/../RTC_Module/RTC.h  \
 mcc_generated_files/../Print_RTC/print_rtc.h  \
 mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h  \
 mcc_generated_files/../External_EEPROM/external_eeprom.h  \
-mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h 
+mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h  \
+mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h  \
+mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h 

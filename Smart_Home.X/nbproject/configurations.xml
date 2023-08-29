@@ -29,6 +29,11 @@
       <logicalFolder name="RTC_Module" displayName="RTC_Module" projectFiles="true">
         <itemPath>RTC_Module/RTC.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="Temp_sensor_TC74"
+                     displayName="Temp_sensor_TC74"
+                     projectFiles="true">
+        <itemPath>Temp_sensor_TC74/Temp_sensor_TC74.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -62,6 +67,11 @@
       <logicalFolder name="RTC_Module" displayName="RTC_Module" projectFiles="true">
         <itemPath>RTC_Module/RTC.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="Temp_sensor_TC74"
+                     displayName="Temp_sensor_TC74"
+                     projectFiles="true">
+        <itemPath>Temp_sensor_TC74/Temp_sensor_TC74.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -75,6 +85,7 @@
     <Elem>RTC_Module</Elem>
     <Elem>Print_RTC</Elem>
     <Elem>External_EEPROM</Elem>
+    <Elem>Temp_sensor_TC74</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

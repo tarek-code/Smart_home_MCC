@@ -12,6 +12,7 @@
                 <sourceRootElem>RTC_Module</sourceRootElem>
                 <sourceRootElem>Print_RTC</sourceRootElem>
                 <sourceRootElem>External_EEPROM</sourceRootElem>
+                <sourceRootElem>Temp_sensor_TC74</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

@@ -5266,9 +5266,18 @@ void print_rtc_data_time(const rtc_get_value_t *ptr);
 
 # 1 "External_EEPROM/../mcc_generated_files/examples/../../External_EEPROM/external_eeprom.h" 1
 # 62 "External_EEPROM/../mcc_generated_files/examples/../../Print_RTC/../mcc_generated_files/mcc.h" 2
-# 80 "External_EEPROM/../mcc_generated_files/examples/../../Print_RTC/../mcc_generated_files/mcc.h"
+
+# 1 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/Temp_sensor_TC74.h" 1
+# 11 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/Temp_sensor_TC74.h"
+# 1 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 1
+# 11 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/Temp_sensor_TC74.h" 2
+
+
+uint8_t Temp_sensor_TC74_Read(i2c_address_t address, uint8_t reg);
+# 63 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 2
+# 81 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 93 "External_EEPROM/../mcc_generated_files/examples/../../Print_RTC/../mcc_generated_files/mcc.h"
+# 94 "External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 12 "External_EEPROM/../mcc_generated_files/examples/../../External_EEPROM/external_eeprom.h" 2
 

@@ -5263,9 +5263,18 @@ void print_rtc_data_time(const rtc_get_value_t *ptr);
 void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data);
 uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address);
 # 62 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 2
-# 80 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+
+# 1 "mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h" 1
+# 11 "mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h"
+# 1 "mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 1
+# 11 "mcc_generated_files/../Temp_sensor_TC74/Temp_sensor_TC74.h" 2
+
+
+uint8_t Temp_sensor_TC74_Read(i2c_address_t address, uint8_t reg);
+# 63 "mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h" 2
+# 81 "mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 93 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+# 94 "mcc_generated_files/../Temp_sensor_TC74/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 

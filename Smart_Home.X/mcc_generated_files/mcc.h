@@ -60,12 +60,13 @@
 #include "../RTC_Module/RTC.h"
 #include "../Print_RTC/print_rtc.h"
 #include "../External_EEPROM/external_eeprom.h"
-
+#include "../Temp_sensor_TC74/Temp_sensor_TC74.h"
 
 
 #define EEPROM_1_ADDRESS    81
 #define EEPROM_2_ADDRESS    83
-
+#define TEMP_TC74_ADDRESS   79
+#define TEMP_TC74_REG       0x00
 /**
  * @Param
     none

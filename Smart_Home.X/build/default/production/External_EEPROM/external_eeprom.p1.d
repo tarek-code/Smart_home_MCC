@@ -12,4 +12,6 @@ External_EEPROM/../mcc_generated_files/examples/../eusart.h  \
 External_EEPROM/../mcc_generated_files/examples/../../RTC_Module/RTC.h  \
 External_EEPROM/../mcc_generated_files/examples/../../Print_RTC/print_rtc.h  \
 External_EEPROM/../mcc_generated_files/examples/../../Print_RTC/../mcc_generated_files/mcc.h  \
-External_EEPROM/../mcc_generated_files/examples/../../External_EEPROM/external_eeprom.h 
+External_EEPROM/../mcc_generated_files/examples/../../External_EEPROM/external_eeprom.h  \
+External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/Temp_sensor_TC74.h  \
+External_EEPROM/../mcc_generated_files/examples/../../Temp_sensor_TC74/../mcc_generated_files/mcc.h 
