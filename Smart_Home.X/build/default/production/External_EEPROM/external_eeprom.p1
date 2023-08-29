@@ -1,25 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F3119 `(v ~T0 @X0 0 tf ]
-"110 mcc_generated_files/interrupt_manager.h
-[; ;mcc_generated_files/interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
-[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
-"89 mcc_generated_files/examples/../i2c_master.h
-[v _I2C_Initialize `(v ~T0 @X0 0 ef ]
-"110 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 110: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"93 mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h
-[; ;mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h: 93: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"110 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 110: void EUSART_Initialize(void);
-[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"6455 C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h
-[; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 6455: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"3072
-[; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 3072: extern volatile unsigned char OSCTUNE __attribute__((address(0xF9B)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
+[v F441 `(v ~T0 @X0 0 tf ]
+"56 External_EEPROM/../mcc_generated_files/examples/../../RTC_Module/../mcc_generated_files/examples/i2c_master_example.h
+[v _I2C_Write1ByteRegister `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+[v F38 `(v ~T0 @X0 1 tf1`ul ]
+"12 E:\Program Files\Microchip\xc8\v2.41\pic\include\builtins.h
+[v __delay `JF38 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 External_EEPROM/../mcc_generated_files/examples/../../RTC_Module/../mcc_generated_files/examples/i2c_master_example.h
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 External_EEPROM/../mcc_generated_files/examples/../i2c_master.h
+[; ;External_EEPROM/../mcc_generated_files/examples/../i2c_master.h: 213: void (*MSSP_InterruptHandler)(void);
+[v _MSSP_InterruptHandler `*F441 ~T0 @X0 1 e ]
 "54 C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h
 [; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 54: __asm("SSPMSK equ 0F77h");
 [; <" SSPMSK equ 0F77h ;# ">
@@ -461,50 +452,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7352
 [; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 7352: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"213 mcc_generated_files/examples/../i2c_master.h
-[v _MSSP_InterruptHandler `*F3119 ~T0 @X0 1 e ]
-"50 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"51
-[; ;mcc_generated_files/mcc.c: 51: {
+"5 External_EEPROM/external_eeprom.c
+[; ;External_EEPROM/external_eeprom.c: 5: void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data){
+[v _eeprom_24C01C_write_byte `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
-[e :U _SYSTEM_Initialize ]
+[e :U _eeprom_24C01C_write_byte ]
+[v _eeprom_id `uc ~T0 @X0 1 r1 ]
+[v _byte_address `uc ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
 [f ]
-"53
-[; ;mcc_generated_files/mcc.c: 53:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
-"54
-[; ;mcc_generated_files/mcc.c: 54:     I2C_Initialize();
-[e ( _I2C_Initialize ..  ]
-"55
-[; ;mcc_generated_files/mcc.c: 55:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"56
-[; ;mcc_generated_files/mcc.c: 56:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
-"57
-[; ;mcc_generated_files/mcc.c: 57:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
-"58
-[; ;mcc_generated_files/mcc.c: 58: }
+"6
+[; ;External_EEPROM/external_eeprom.c: 6:     I2C_Write1ByteRegister(eeprom_id,byte_address,data);
+[e ( _I2C_Write1ByteRegister (3 , , _eeprom_id _byte_address _data ]
+"7
+[; ;External_EEPROM/external_eeprom.c: 7:     _delay((unsigned long)((100)*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"8
+[; ;External_EEPROM/external_eeprom.c: 8: }
 [e :UE 308 ]
 }
-"60
-[; ;mcc_generated_files/mcc.c: 60: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"61
-[; ;mcc_generated_files/mcc.c: 61: {
+"10
+[; ;External_EEPROM/external_eeprom.c: 10: uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address){
+[v _eeprom_24C01C_read_byte `(uc ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _eeprom_24C01C_read_byte ]
+[v _eeprom_id `uc ~T0 @X0 1 r1 ]
+[v _byte_address `uc ~T0 @X0 1 r2 ]
 [f ]
-"63
-[; ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x30;
-[e = _OSCCON -> -> 48 `i `uc ]
-"65
-[; ;mcc_generated_files/mcc.c: 65:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"66
-[; ;mcc_generated_files/mcc.c: 66: }
+"11
+[; ;External_EEPROM/external_eeprom.c: 11:    return I2C_Read1ByteRegister(eeprom_id,byte_address);
+[e ) ( _I2C_Read1ByteRegister (2 , _eeprom_id _byte_address ]
+[e $UE 309  ]
+"12
+[; ;External_EEPROM/external_eeprom.c: 12: }
 [e :UE 309 ]
 }

@@ -8,5 +8,8 @@ mcc_generated_files/i2c_master.h  \
 mcc_generated_files/memory.h  \
 mcc_generated_files/eusart.h  \
 mcc_generated_files/examples/i2c_master_example.h  \
-Print_RTC/print_rtc.h  \
-Print_RTC/../RTC_Module/RTC.h 
+mcc_generated_files/../RTC_Module/RTC.h  \
+mcc_generated_files/../Print_RTC/print_rtc.h  \
+mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h  \
+mcc_generated_files/../External_EEPROM/external_eeprom.h  \
+mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h 

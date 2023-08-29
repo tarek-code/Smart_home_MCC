@@ -5229,9 +5229,44 @@ void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 59 "mcc_generated_files/mcc.h" 2
-# 74 "mcc_generated_files/mcc.h"
+
+# 1 "mcc_generated_files/../RTC_Module/RTC.h" 1
+# 12 "mcc_generated_files/../RTC_Module/RTC.h"
+typedef struct{
+    uint8_t Seconds;
+    uint8_t Minutes;
+    uint8_t Houres;
+    uint8_t Day;
+    uint8_t Month;
+    uint8_t Year;
+    uint8_t Date;
+
+}rtc_get_value_t;
+
+rtc_get_value_t rtc_get_value(uint8_t adress);
+# 60 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/../Print_RTC/print_rtc.h" 1
+# 11 "mcc_generated_files/../Print_RTC/print_rtc.h"
+# 1 "mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h" 1
+# 11 "mcc_generated_files/../Print_RTC/print_rtc.h" 2
+
+
+void print_rtc_data_time(const rtc_get_value_t *ptr);
+# 61 "mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/../External_EEPROM/external_eeprom.h" 1
+# 12 "mcc_generated_files/../External_EEPROM/external_eeprom.h"
+# 1 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 1
+# 12 "mcc_generated_files/../External_EEPROM/external_eeprom.h" 2
+
+
+void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data);
+uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address);
+# 62 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 2
+# 80 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 87 "mcc_generated_files/mcc.h"
+# 93 "mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 

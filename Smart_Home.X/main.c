@@ -42,7 +42,6 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-#include "Print_RTC/print_rtc.h"
 
 
 
@@ -50,7 +49,8 @@
                          Main application
  */
 rtc_get_value_t reading;
- 
+uint8_t data_1=0;
+uint8_t data_2=0;
 void main(void)
 {
     // Initialize the device
@@ -72,11 +72,15 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-reading =rtc_get_value(104);
-print_rtc_data_time(&reading);
+
+eeprom_24C01C_write_byte(EEPROM_1_ADDRESS,0x08,5);
+eeprom_24C01C_write_byte(EEPROM_2_ADDRESS,0x08,6);
+data_1=eeprom_24C01C_read_byte(EEPROM_1_ADDRESS,0x08);
+data_2=eeprom_24C01C_read_byte(EEPROM_2_ADDRESS,0x08);
     while (1)
     {
-        
+        reading =rtc_get_value(104);
+        print_rtc_data_time(&reading);
   
         // Add your application code
     }

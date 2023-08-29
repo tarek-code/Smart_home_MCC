@@ -1,7 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F3119 `(v ~T0 @X0 0 tf ]
 "12 Print_RTC/../RTC_Module/RTC.h
-[; ;Print_RTC/../RTC_Module/RTC.h: 12: typedef struct{
 [s S307 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S307 . Seconds Minutes Houres Day Month Year Date ]
 "111 E:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h

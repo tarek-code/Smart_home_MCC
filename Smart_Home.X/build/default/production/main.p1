@@ -1,11 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F3119 `(v ~T0 @X0 0 tf ]
-"12 ./Print_RTC/../RTC_Module/RTC.h
-[; ;./Print_RTC/../RTC_Module/RTC.h: 12: typedef struct{
+"12 ./mcc_generated_files/../Print_RTC/../RTC_Module/RTC.h
 [s S307 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S307 . Seconds Minutes Houres Day Month Year Date ]
 [p mainexit ]
-"74 ./Print_RTC/../mcc_generated_files/mcc.h
+"80 ./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h: 80: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "7049 C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h
 [; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 7049:     struct {
@@ -26,11 +26,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7075
 [; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 7075: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS296 ~T0 @X0 0 e@4082 ]
-"23 ./Print_RTC/../RTC_Module/RTC.h
-[; ;./Print_RTC/../RTC_Module/RTC.h: 23: rtc_get_value_t rtc_get_value(uint8_t adress);
+"14 ./mcc_generated_files/../External_EEPROM/external_eeprom.h
+[; ;./mcc_generated_files/../External_EEPROM/external_eeprom.h: 14: void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data);
+[v _eeprom_24C01C_write_byte `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"15
+[; ;./mcc_generated_files/../External_EEPROM/external_eeprom.h: 15: uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address);
+[v _eeprom_24C01C_read_byte `(uc ~T0 @X0 0 ef2`uc`uc ]
+"23 ./mcc_generated_files/../Print_RTC/../RTC_Module/RTC.h
 [v _rtc_get_value `(S307 ~T0 @X0 0 ef1`uc ]
-"13 ./Print_RTC/print_rtc.h
-[; ;./Print_RTC/print_rtc.h: 13: void print_rtc_data_time(const rtc_get_value_t *ptr);
+"13 ./mcc_generated_files/../Print_RTC/print_rtc.h
+[; ;./mcc_generated_files/../Print_RTC/print_rtc.h: 13: void print_rtc_data_time(const rtc_get_value_t *ptr);
 [v _print_rtc_data_time `(v ~T0 @X0 0 ef1`*CS307 ]
 "54 C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h
 [; ;C:/Users/Unlimited/.mchp_packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f46k20.h: 54: __asm("SSPMSK equ 0F77h");
@@ -475,9 +480,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "213 ./mcc_generated_files/examples/../i2c_master.h
 [v _MSSP_InterruptHandler `*F3119 ~T0 @X0 1 e ]
-"52 main.c
-[; ;main.c: 52: rtc_get_value_t reading;
+"51 main.c
+[; ;main.c: 51: rtc_get_value_t reading;
 [v _reading `S307 ~T0 @X0 1 e ]
+"52
+[; ;main.c: 52: uint8_t data_1=0;
+[v _data_1 `uc ~T0 @X0 1 e ]
+[i _data_1
+-> -> 0 `i `uc
+]
+"53
+[; ;main.c: 53: uint8_t data_2=0;
+[v _data_2 `uc ~T0 @X0 1 e ]
+[i _data_2
+-> -> 0 `i `uc
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "54
 [; ;main.c: 54: void main(void)
@@ -496,25 +513,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;main.c: 71:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"75
-[; ;main.c: 75: reading =rtc_get_value(104);
-[e = _reading ( _rtc_get_value (1 -> -> 104 `i `uc ]
 "76
-[; ;main.c: 76: print_rtc_data_time(&reading);
-[e ( _print_rtc_data_time (1 -> &U _reading `*CS307 ]
+[; ;main.c: 76: eeprom_24C01C_write_byte(81,0x08,5);
+[e ( _eeprom_24C01C_write_byte (3 , , -> -> 81 `i `uc -> -> 8 `i `uc -> -> 5 `i `uc ]
 "77
-[; ;main.c: 77:     while (1)
-[e :U 310 ]
+[; ;main.c: 77: eeprom_24C01C_write_byte(83,0x08,6);
+[e ( _eeprom_24C01C_write_byte (3 , , -> -> 83 `i `uc -> -> 8 `i `uc -> -> 6 `i `uc ]
 "78
-[; ;main.c: 78:     {
+[; ;main.c: 78: data_1=eeprom_24C01C_read_byte(81,0x08);
+[e = _data_1 ( _eeprom_24C01C_read_byte (2 , -> -> 81 `i `uc -> -> 8 `i `uc ]
+"79
+[; ;main.c: 79: data_2=eeprom_24C01C_read_byte(83,0x08);
+[e = _data_2 ( _eeprom_24C01C_read_byte (2 , -> -> 83 `i `uc -> -> 8 `i `uc ]
+"80
+[; ;main.c: 80:     while (1)
+[e :U 310 ]
+"81
+[; ;main.c: 81:     {
 {
 "82
-[; ;main.c: 82:     }
+[; ;main.c: 82:         reading =rtc_get_value(104);
+[e = _reading ( _rtc_get_value (1 -> -> 104 `i `uc ]
+"83
+[; ;main.c: 83:         print_rtc_data_time(&reading);
+[e ( _print_rtc_data_time (1 -> &U _reading `*CS307 ]
+"86
+[; ;main.c: 86:     }
 }
 [e :U 309 ]
 [e $U 310  ]
 [e :U 311 ]
-"83
-[; ;main.c: 83: }
+"87
+[; ;main.c: 87: }
 [e :UE 308 ]
 }

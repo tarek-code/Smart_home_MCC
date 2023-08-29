@@ -4,6 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="External_EEPROM"
+                     displayName="External_EEPROM"
+                     projectFiles="true">
+        <itemPath>External_EEPROM/external_eeprom.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -32,6 +37,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="External_EEPROM"
+                     displayName="External_EEPROM"
+                     projectFiles="true">
+        <itemPath>External_EEPROM/external_eeprom.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -64,6 +74,7 @@
   <sourceRootList>
     <Elem>RTC_Module</Elem>
     <Elem>Print_RTC</Elem>
+    <Elem>External_EEPROM</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -11,6 +11,7 @@
             <sourceRootList>
                 <sourceRootElem>RTC_Module</sourceRootElem>
                 <sourceRootElem>Print_RTC</sourceRootElem>
+                <sourceRootElem>External_EEPROM</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

@@ -5228,16 +5228,9 @@ void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 59 "./mcc_generated_files/mcc.h" 2
-# 74 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 87 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 44 "main.c" 2
 
-# 1 "./Print_RTC/print_rtc.h" 1
-# 12 "./Print_RTC/print_rtc.h"
-# 1 "./Print_RTC/../RTC_Module/RTC.h" 1
-# 12 "./Print_RTC/../RTC_Module/RTC.h"
+# 1 "./mcc_generated_files/../RTC_Module/RTC.h" 1
+# 12 "./mcc_generated_files/../RTC_Module/RTC.h"
 typedef struct{
     uint8_t Seconds;
     uint8_t Minutes;
@@ -5250,10 +5243,31 @@ typedef struct{
 }rtc_get_value_t;
 
 rtc_get_value_t rtc_get_value(uint8_t adress);
-# 12 "./Print_RTC/print_rtc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/../Print_RTC/print_rtc.h" 1
+# 11 "./mcc_generated_files/../Print_RTC/print_rtc.h"
+# 1 "./mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h" 1
+# 11 "./mcc_generated_files/../Print_RTC/print_rtc.h" 2
+
 
 void print_rtc_data_time(const rtc_get_value_t *ptr);
-# 45 "main.c" 2
+# 61 "./mcc_generated_files/../Print_RTC/../mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/../External_EEPROM/external_eeprom.h" 1
+# 12 "./mcc_generated_files/../External_EEPROM/external_eeprom.h"
+# 1 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 1
+# 12 "./mcc_generated_files/../External_EEPROM/external_eeprom.h" 2
+
+
+void eeprom_24C01C_write_byte(i2c_address_t eeprom_id,i2c_address_t byte_address,uint8_t data);
+uint8_t eeprom_24C01C_read_byte(i2c_address_t eeprom_id,i2c_address_t byte_address);
+# 62 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h" 2
+# 80 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+# 93 "./mcc_generated_files/../External_EEPROM/../mcc_generated_files/mcc.h"
+void OSCILLATOR_Initialize(void);
+# 44 "main.c" 2
 
 
 
@@ -5262,7 +5276,8 @@ void print_rtc_data_time(const rtc_get_value_t *ptr);
 
 
 rtc_get_value_t reading;
-
+uint8_t data_1=0;
+uint8_t data_2=0;
 void main(void)
 {
 
@@ -5284,11 +5299,15 @@ void main(void)
 
 
 
-reading =rtc_get_value(104);
-print_rtc_data_time(&reading);
+
+eeprom_24C01C_write_byte(81,0x08,5);
+eeprom_24C01C_write_byte(83,0x08,6);
+data_1=eeprom_24C01C_read_byte(81,0x08);
+data_2=eeprom_24C01C_read_byte(83,0x08);
     while (1)
     {
-
+        reading =rtc_get_value(104);
+        print_rtc_data_time(&reading);
 
 
     }

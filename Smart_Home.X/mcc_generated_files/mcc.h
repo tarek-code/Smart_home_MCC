@@ -57,8 +57,14 @@
 #include "memory.h"
 #include "eusart.h"
 #include "examples/i2c_master_example.h"
+#include "../RTC_Module/RTC.h"
+#include "../Print_RTC/print_rtc.h"
+#include "../External_EEPROM/external_eeprom.h"
 
 
+
+#define EEPROM_1_ADDRESS    81
+#define EEPROM_2_ADDRESS    83
 
 /**
  * @Param
